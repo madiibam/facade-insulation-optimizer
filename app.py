@@ -217,8 +217,10 @@ def load_model():
     try:
         import tensorflow as tf
         import joblib
-        model  = tf.keras.models.load_model("facade_mlp_model.keras")
-        scaler = joblib.load("facade_scaler.pkl")
+        import os
+        base = os.path.dirname(os.path.abspath(__file__))
+        model  = tf.keras.models.load_model(os.path.join(base, "facade_mlp_model.keras"))
+        scaler = joblib.load(os.path.join(base, "facade_scaler.pkl"))
         return model, scaler, True
     except Exception:
         return None, None, False

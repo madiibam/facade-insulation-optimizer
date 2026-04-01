@@ -219,7 +219,7 @@ def load_model():
         import joblib
         import os
         base = os.path.dirname(os.path.abspath(__file__))
-        model = tf.keras.models.load_model(os.path.join(base, "facade_mlp_model.h5"))
+        model = tf.keras.models.load_model(os.path.join(base, "facade_mlp_model_v2.h5"))
         scaler = joblib.load(os.path.join(base, "facade_scaler.pkl"))
         return model, scaler, True
     except Exception as e:

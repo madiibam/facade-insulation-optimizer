@@ -1,9 +1,8 @@
 streamlit
-tensorflow-cpu
+tensorflow==2.18.0
 scikit-learn
 scipy
 matplotlib
 joblib
 numpy
 pandas
-

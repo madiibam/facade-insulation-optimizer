@@ -223,7 +223,6 @@ def load_model():
         scaler = joblib.load(os.path.join(base, "facade_scaler.pkl"))
         return model, scaler, True
     except Exception as e:
-        st.sidebar.error(f"Model error: {e}")
         return None, None, False
 
 model, scaler, model_loaded = load_model()
